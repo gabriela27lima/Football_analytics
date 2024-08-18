@@ -29,3 +29,20 @@ O gráfico Bumpy é uma ferramenta útil para visualizar como a posição de um 
 - **Linha**: Conecta os pontos e mostra a trajetória da posição do time ao longo das rodadas.
 - **Marcadores (ou Pontos)**: Indicam a posição exata do time em cada rodada ao longo da linha.
 
+## Salvando o Gráfico como Imagem
+
+Para salvar o gráfico gerado como uma imagem e garantir que ele possa ser facilmente utilizado em diferentes contextos, como em páginas web ou documento.
+
+buf = io.BytesIO()
+fig.savefig(buf, format='png', dpi=150, bbox_inches='tight')
+buf.seek(0)
+img_str = base64.b64encode(buf.read()).decode('utf-8')
+plt.close(fig)
+
+- **`io.BytesIO()`**: Cria um buffer de memória onde o gráfico será salvo temporariamente. Isso evita a necessidade de salvar o gráfico em um arquivo físico no disco.
+
+- **`fig.savefig(buf, format='png', dpi=150, bbox_inches='tight')`**: Salva o gráfico no buffer em formato PNG com uma resolução de 150 dpi. O parâmetro `bbox_inches='tight'` ajusta a caixa delimitadora para incluir apenas o conteúdo do gráfico, eliminando espaços em branco desnecessários ao redor da imagem.
+
+- **`buf.seek(0)`**: Reposiciona o ponteiro do buffer no início para garantir que toda a imagem seja lida corretamente na etapa seguinte.
+
+- **`base64.b64encode(buf.read()).decode('utf-8')`**: Lê o conteúdo do buffer, codifica a imagem em base64 e a decodifica para uma string UTF-8. Isso permite que a imagem seja incorporada diretamente em HTML ou outros formatos que aceitam strings codificadas, facilitando a inclusão do gráfico em páginas web e relatórios sem precisar de arquivos externos.
