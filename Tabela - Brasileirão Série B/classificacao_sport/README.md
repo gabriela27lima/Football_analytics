@@ -17,7 +17,7 @@ Neste projeto, vamos usar um script Python para calcular e visualizar a classifi
 
 ## Gráfico Bumpy
 
-O gráfico Bumpy é uma ferramenta útil para visualizar como a posição de um time muda ao longo de um campeonato. Aqui está uma explicação de como ele é estruturado:
+O gráfico Bumpy é uma ferramenta útil para visualizar como a posição de um time muda ao longo do campeonato:
 
 ### Estrutura do Gráfico
 
