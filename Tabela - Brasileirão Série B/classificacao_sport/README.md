@@ -1,24 +1,31 @@
 # Classificação do Sport Recife
 
-Este projeto contém um script Python para calcular e visualizar a classificação do time Sport Recife ao longo das rodadas de um campeonato. O código realiza o cálculo das estatísticas de cada time e plota a classificação do Sport Recife usando um gráfico tipo Bumpy.
+Neste projeto, vamos usar um script Python para calcular e visualizar a classificação do Sport Recife ao longo das rodadas do Brasileirão - Série B. O objetivo é calcular as estatísticas de cada time e criar um gráfico tipo Bumpy para mostrar a evolução da classificação do Sport Recife.
 
 ## Funcionalidades
 
-1. **Cálculo das Estatísticas dos Times**: Calcula pontos, vitórias, empates, derrotas e gols realizados e sofridos com base nos resultados dos jogos.
+1. **Cálculo das Estatísticas dos Times**
+   - **Pontos**: Total de pontos ganhos pelo time.
+   - **Vitórias**: Número de jogos vencidos.
+   - **Empates**: Número de jogos empatados.
+   - **Derrotas**: Número de jogos perdidos.
+   - **Gols Realizados**: Total de gols marcados.
+   - **Gols Sofridos**: Total de gols sofridos.
 
-2. **Geração do Gráfico de Classificação**: Cria um gráfico que mostra a evolução da classificação do Sport Recife ao longo das rodadas do campeonato.
+2. **Geração do Gráfico de Classificação**
+   - **Gráfico Bumpy**: Visualiza a evolução da posição do Sport Recife ao longo das rodadas.
 
-## Requisitos
+## Gráfico Bumpy
 
-Certifique-se de ter as seguintes bibliotecas instaladas:
-- `numpy`
-- `pandas`
-- `requests`
-- `Pillow` (PIL)
-- `matplotlib`
-- `highlight_text`
-- `mplsoccer`
+O gráfico Bumpy é uma ferramenta útil para visualizar como a posição de um time muda ao longo de um campeonato. Aqui está uma explicação de como ele é estruturado:
 
-Você pode instalar essas bibliotecas usando o seguinte comando:
-```bash
-pip install numpy pandas requests pillow matplotlib highlight_text mplsoccer
+### Estrutura do Gráfico
+
+- **Eixo X (Horizontal)**: Representa as rodadas do campeonato. Cada ponto ao longo deste eixo mostra a posição do time em uma rodada específica.
+- **Eixo Y (Vertical)**: Representa a posição do time na tabela de classificação. A posição é numerada de 1 a 10 (ou outro intervalo dependendo do número de times), onde 1 é a melhor posição e 10 é a pior.
+
+### Linha e Marcadores
+
+- **Linha**: Conecta os pontos e mostra a trajetória da posição do time ao longo das rodadas.
+- **Marcadores (ou Pontos)**: Indicam a posição exata do time em cada rodada ao longo da linha.
+
